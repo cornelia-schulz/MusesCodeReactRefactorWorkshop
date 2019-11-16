@@ -102,7 +102,7 @@ class Search extends Component {
     )
   }
 
-  render() {
+  renderSearch() {
     return (
       <div className="row">
         <div className="col-lg-12">
@@ -146,6 +146,12 @@ class Search extends Component {
           : this.renderResults() }
         </div>
       </div>
+    );
+  }
+
+  render() {
+    return (
+      this.props.collapsed ? <div className="row"><h3>Here's the summary</h3></div> : this.renderSearch()
     );
   }
 }

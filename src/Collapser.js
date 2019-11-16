@@ -4,7 +4,7 @@ class Collapser extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        collapse: true,
+        collapse: false,
       }
       this.collapseBlock = this.collapseBlock.bind(this);
   }
@@ -15,13 +15,13 @@ class Collapser extends Component {
   
   render() {
     return (
-      <div className={this.state.collapse? "open row": "closed row"} data-testid="collapse-block">
+      <div className={this.state.collapse? "closed": "open"} data-testid="collapse-block">
         <button type="button"
           className="btn btn-danger"
           onClick={this.collapseBlock}
           data-testid="collapse-button">
         </button>
-        {this.props.children}
+        {this.props.render(this.state.collapse)}
       </div>
     )
   }

@@ -42,9 +42,7 @@ class App extends Component {
         <Nav/>
         <div className="container">
           <Characters chars={this.state.characters} removeCharacter={this.removeCharacter}/>
-          <Collapser>
-            <Search add={this.addCharacter} />
-          </Collapser>
+          <Collapser render={(collapsed) =>(<Search add={this.addCharacter} collapsed={collapsed} />)}/>
         </div>
       </div>
     );
