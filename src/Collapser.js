@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Search from './Search';
 
 class Collapser extends Component {
   constructor(props) {
@@ -22,7 +21,7 @@ class Collapser extends Component {
           onClick={this.collapseBlock}
           data-testid="collapse-button">
         </button>
-        {/* <Search add={this.addCharacter} /> */}
+        {this.props.children}
       </div>
     )
   }
