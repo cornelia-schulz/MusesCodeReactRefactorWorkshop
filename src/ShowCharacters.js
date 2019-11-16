@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
-import usePlaceholder from './usePlaceholder';
+import Img from './Img';
 const groupSize = 3;
-
-const Img = ({name, src}) => {
-  const url = usePlaceholder(src);
-
-  return (
-    <img
-      style={{maxWidth: "18rem"}}
-      data-testid="picture"
-      alt={name}
-      src={url}
-    />
-  )
-}
 
 const Character = (props) => (
   <div className="card text-white bg-primary mb-3"

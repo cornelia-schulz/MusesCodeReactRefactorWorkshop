@@ -1,3 +1,4 @@
+import React from 'react';
 import usePlaceholder from './usePlaceholder';
 
 const Img = ({name, src}) => {
