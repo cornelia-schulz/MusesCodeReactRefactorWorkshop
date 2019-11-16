@@ -1,7 +1,6 @@
 import React from 'react';
 import ShowCharacters from './ShowCharacters';
 
-
 const Characters = (props) => (
   <div data-testid="characters" className="row">
    {props.chars.length>0

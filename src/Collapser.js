@@ -19,7 +19,9 @@ class Collapser extends Component {
         <button type="button"
           className="btn btn-danger"
           onClick={this.collapseBlock}
-          data-testid="collapse-button">
+          data-testid="collapse-button"
+        >
+          Hide search
         </button>
         {this.props.render(this.state.collapse)}
       </div>
